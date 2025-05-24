@@ -18,12 +18,13 @@ services:
     - db
 
   db:
-    image: postgres:13.21-alpine3.20
+    image: postgres:17.5-alpine3.21
     volumes:
     - dev-db-data:/var/lib/postgresql/data
     environment:
     - POSTGRES_DB=devdb
     - POSTGRES_USER=devuser
+    #- POSTGRES_USER=django-user
     - POSTGRES_PASSWORD=changeme
     
 volumes:
