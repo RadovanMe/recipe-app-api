@@ -80,12 +80,12 @@ DATABASES = {
        'ENGINE': 'django.db.backends.postgresql',
        'HOST': os.environ.get('DB_HOST'),
        'NAME': os.environ.get('DB_NAME'),
-       'USER': os.environ.get('DB_USER'),
-       'PASSWORD': os.environ.get('DB_PASS'),
+       #'USER': os.environ.get('DB_USER'),
+       #'PASSWORD': os.environ.get('DB_PASS'),
        #'HOST': 'db',
-       #'NAME': 'devdb',       
-       #'USER': 'django-user',
-       #'PASSWORD': 'changeme'
+       #'NAME': 'devdb',
+       'USER': 'django-user',
+       'PASSWORD': 'changeme'
     }
 }
 
@@ -130,3 +130,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'core.User'
